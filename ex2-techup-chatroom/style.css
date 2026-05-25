@@ -1,1 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sarabun", sans-serif;
+}
+
 /* Start coding here */
+.chat-header {
+  background-color: #808080;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+
+.chat-header h1 {
+  margin: 0;
+  color: #fffbe3;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 35px 22px 30px 26px;
+  background-color: #ffffff;
+  min-height: calc(100vh - 60px);
+}
+
+.bubble {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #000000;
+  text-align: left;
+}
+
+.bubble-green {
+  align-self: flex-end;
+  width: 207px;
+  padding: 9px 18px;
+  background-color: #09be09;
+  border-radius: 20px;
+}
+
+.bubble-green--tail {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.bubble-green--tail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -9px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 0 0 9px;
+  border-color: #09be09 transparent transparent transparent;
+}
+
+.bubble-light-gray {
+  position: relative;
+  align-self: flex-end;
+  width: 214px;
+  padding: 10px 18px;
+  background-color: #e7e3e3;
+  border-radius: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #bebebe;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bubble-gray {
+  align-self: flex-start;
+  width: 197px;
+  padding: 7px 12px;
+  background-color: #808080;
+  color: #ffffff;
+  border-radius: 999px;
+}
+
+.bubble-gray + .bubble-gray {
+  margin-top: 5px;
+}

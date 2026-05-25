@@ -2,4 +2,53 @@ body {
   font-family: "Kanit";
 }
 
-/* Start coding here */
+.card {
+  position: relative;
+  width: 624px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.card-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.card-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 14px;
+  background-color: rgba(60, 60, 60, 0.75);
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  line-height: 1.2;
+}
