@@ -1,1 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sarabun", Arial, Helvetica, sans-serif;
+}
+
 /* Start coding here */
+
+.header {
+  background-color: #888888;
+  padding: 16px 24px;
+}
+
+.header__title {
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: sticky;
+}
+
+.chat {
+  position: relative;
+  min-height: calc(100vh - 60px);
+  background-color: #ffffff;
+  z-index: -1;
+}
+
+.bubble {
+  position: absolute;
+  width: 220px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 999px;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.bubble--green {
+  background-color: #00cc44;
+}
+
+.bubble--light-gray {
+  background-color: #e0e0e0;
+}
+
+.bubble--gray {
+  background-color: #9a9a9a;
+  color: #000000;
+}
+
+.bubble--right:nth-of-type(1) {
+  top: 24px;
+  right: 24px;
+}
+
+.bubble--right:nth-of-type(2) {
+  top: 88px;
+  right: 24px;
+}
+
+.bubble--right:nth-of-type(3) {
+  top: 152px;
+  right: 24px;
+}
+
+.bubble--left:nth-of-type(4) {
+  top: 200px;
+  left: 24px;
+}
+
+.bubble--left-2 {
+  top: 264px;
+  left: 24px;
+}
+
+.bubble--tail::after {
+  content: "";
+  position: absolute;
+  bottom: 28px;
+  right:3px;
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  box-shadow:
+    5px 3px 0 0 #00cc44;
+  z-index: -1; /* Make it behind the chat box */
+}
+
+.bubble__close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #888888;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
