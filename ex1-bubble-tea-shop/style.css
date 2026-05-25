@@ -1,5 +1,70 @@
 body {
-  font-family: "Kanit";
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 /* Start coding here */
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  border: 10px solid #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 55%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    transparent 100%
+  );
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.card__title {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  z-index: 1;
+}
+
+.card__badge {
+  position: absolute;
+  top: 16px;
+  right: 5px;
+  padding: 6px 14px;
+  background-color: rgba(70, 70, 70, 0.92);
+  color: #ffffff;
+  font-size: 1rem;
+  z-index: 1;
+}
